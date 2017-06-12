@@ -52,9 +52,7 @@ we had to parse schema on every validation
 **Next step**
 
 For reasons mentioned earlier, we were looking for more F#-friendly ways of dealing with JSON. 
-JsonValue library from FSharp.Data suited us well. Certain difficulties associated with presence of type providers 
-in the same library made us to fork relevant part of FSharp.Data directly into our code base. This also created 
-an opportunity to build custom Json Schema validation and abandon Newtonsoft completely.
+[JsonValue](https://github.com/fsharp/FSharp.Data/blob/master/src/Json/JsonValue.fs) library from FSharp.Data suited us well. Certain difficulties associated with presence of type providers in the same library made us to fork relevant part of FSharp.Data directly into our code base. This also created an opportunity to build custom Json Schema validation and abandon Newtonsoft completely.
 At that point it also became clear that, while validation is necessary for Partner API, (de)serialization is not.
 A lot of messages coming into API are passed downstream to other systems without any business logic applied, so 
 dealing with JsonValue objects directly proved to be much more efficient than supporting translation to and from F# record types.
