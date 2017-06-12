@@ -62,10 +62,10 @@ dealing with JsonValue objects directly proved to be much more efficient than su
 **Conclusion**
 
 It is easy to miss an impedance mismatch between JSON and .Net types. (De)serialization by itself is a form of validation
-and as such it exposes serialization limitations foreign to Json.
+and as such it exposes serialization limitations foreign to JSON.
 
-Having upfront validation based on schema allows Partner API to avoid leaking out details of implementation to customers. 
-While schema-provided validation is limited to individual properties, it eliminates a lot of boilerplate.
+Having upfront validation based on schema allows Jet Partner API to avoid leaking out details of implementation to customers. 
+While schema-based validation is limited to individual properties, it eliminates a lot of boilerplate.
 
 Json schema creates powerful opportunity to build types with well-defined structure that would (de)serialize in transparent manner. 
 I believe this type provider can be re-written to operate with JsonValue types directly and use custom schema validation.
